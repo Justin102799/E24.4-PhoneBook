@@ -3,7 +3,10 @@
       <div class="wrapper">
         <div class="contact-item" *ngFor="let contact of phoneContacts">
           <div class="name">{{contact.contactName}} - {{contact.phoneNumber}}
-            <button (click)="ClickDelete(contact)" >Delete</button></div>
+            <button (click)="ClickDelete(contact)" >Delete</button>
+            <h4><button [class.selected] = "contact === selectedPhoneContacts"
+              (click)="updateContact(contact)">Edit Contact</button></h4>
+          </div>
         </div>
       </div>
       <br />
@@ -12,5 +15,10 @@
         <h3>Name: <input type="text" [(ngModel)]="newContactName"></h3><br />
         <h3>Mobile Number:  <input type="text" [(ngModel)]="newPhoneNumber"></h3><br />
         <h4><button (click)="addContact()">Add Contact</button></h4>
+      </div>
+      <div class="wrapper" *ngIf = "selectedPhoneContacts">
+        <h2>Update Contect</h2>
+        <h3>Name: <input type="text" [(ngModel)]="selectedPhoneContacts.contactName"></h3><br />
+        <h3>Mobile Number:  <input type="text" [(ngModel)]="selectedPhoneContacts.phoneNumber"></h3><br />
       </div>
 

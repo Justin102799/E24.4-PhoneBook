@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/interfaces/book';
 import { CONTACTS } from 'src/app/mock-phoneBook/mock-phoneBook';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'app-phone-book',
@@ -9,15 +10,15 @@ import { CONTACTS } from 'src/app/mock-phoneBook/mock-phoneBook';
 })
 export class PhoneBookComponent {
   phoneContacts = CONTACTS;
+  newId = 0;
   newContactName = '';
   newPhoneNumber = '';
-
- 
-
+  selectedPhoneContacts?: Book;
+  
   addContact(){
-      this.phoneContacts.push({contactName: this.newContactName, phoneNumber: this.newPhoneNumber, }) 
-      // this.newContactName = '';
-      // this.newPhoneNumber = '';
+      const id = uuid.v4()
+      this.phoneContacts.push({id, contactName: this.newContactName, phoneNumber: this.newPhoneNumber, }) 
+      console.log (id);
     };
 
   ClickDelete(telNumber: Book){
@@ -26,5 +27,10 @@ export class PhoneBookComponent {
       this.phoneContacts.splice(index, 1)
     }
   };
+
+  updateContact(contact: Book){
+    this.selectedPhoneContacts = contact;
+  }
+
   }
 

@@ -1,7 +1,7 @@
 import { Book } from "../interfaces/book";
 
 export const CONTACTS: Book[] = [
-    {contactName:"Justin",phoneNumber:"12345",},
-    {contactName:"Neil",phoneNumber:"56789",},
-    {contactName:"Hustino",phoneNumber:"101112"}
+    {id: "1",contactName:"Justin",phoneNumber:"12345",},
+    {id: "2",contactName:"Neil",phoneNumber:"56789",},
+    {id: "3",contactName:"Hustino",phoneNumber:"101112"}
 ];
