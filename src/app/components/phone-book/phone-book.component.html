@@ -1,0 +1,16 @@
+
+    <h1>Address Book</h1>
+      <div class="wrapper">
+        <div class="contact-item" *ngFor="let contact of phoneContacts">
+          <div class="name">{{contact.contactName}} - {{contact.phoneNumber}}
+            <button (click)="ClickDelete(contact)" >Delete</button></div>
+        </div>
+      </div>
+      <br />
+      <div class="wrapper">
+        <h2>Add a Contact</h2>
+        <h3>Name: <input type="text" [(ngModel)]="newContactName"></h3><br />
+        <h3>Mobile Number:  <input type="text" [(ngModel)]="newPhoneNumber"></h3><br />
+        <h4><button (click)="addContact()">Add Contact</button></h4>
+      </div>
+
