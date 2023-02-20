@@ -1,0 +1,48 @@
+$greenColor: green;
+body{
+    font-family: sans-serif;
+    font-weight: 100;
+    background: #ccc;
+  }
+  
+  h1{
+    text-align: center;
+    color: black;
+    text-shadow: 0px 2px 0px #fff;
+    background-color: grey;
+  }
+  
+  .name{
+    font-size: 18px;
+  }
+  
+  .city{
+    font-style: italic;
+    font-size: 13px;
+  }
+  
+  .wrapper{
+    width: 550px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px #555;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  
+  .contact-item{
+    border-bottom: thin solid #ccc;
+    padding: 10px;
+  }
+  
+  button{
+    background: $greenColor;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: thin solid $greenColor;
+    margin: 5px ;
+  }
+  button:hover{
+    background: $greenColor;
+  }
