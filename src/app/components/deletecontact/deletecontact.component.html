@@ -1,0 +1,9 @@
+<select id="contact" [(ngModel)]="selectedName">
+    <option *ngFor="let contact of phoneContacts" [value]="contact.contactName">{{contact.contactName}}</option>
+  </select>
+
+  <button (click)="ClickDelete(selectedName)" >Delete</button>
+
+    <!-- <div class="contact-item" *ngFor="let contact of phoneContacts">   
+        <button (click)="ClickDelete(contact)" >Delete</button> -->
+

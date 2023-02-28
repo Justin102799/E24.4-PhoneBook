@@ -1,5 +1,5 @@
 export interface Book {
-    id: String,
+    id: number,
     contactName: String,
     phoneNumber: String,
     

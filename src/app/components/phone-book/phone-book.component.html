@@ -1,25 +1,27 @@
 
     <h1>Phone Book</h1>
       <div class="wrapper">
+        <app-deletecontact></app-deletecontact>
         <div class="contact-item" *ngFor="let contact of phoneContacts">
           <div class="name">{{contact.contactName}} - {{contact.phoneNumber}} <br>
-            <button (click)="ClickDelete(contact)" >Delete</button>
-            <button [class.selected] = "contact === selectedPhoneContacts"
-              (click)="updateContact(contact)">Edit Contact</button>
+            <!-- <app-deletecontact></app-deletecontact> -->
+            <!-- <button [class.selected] = "contact === selectedPhoneContacts"
+              (click)="updateContact(contact)">Edit Contact</button> -->
           </div>
         </div>
       </div>
       <br />
       <div class="wrapper">
-        <h2>Add Contact</h2>
+        <app-addcontact></app-addcontact>
+        <!-- <h2>Add Contact</h2>
         <h3>Name: <input type="text" [(ngModel)]="newContactName"></h3><br>
         <h3>Mobile Number:  <input type="text" [(ngModel)]="newPhoneNumber"></h3><br>
-        <h4><button (click)="addContact()">Add Contact</button></h4>
+        <h4><button (click)="addContact()">Add Contact</button></h4> -->
       </div>
       <br />
-      <div class="wrapper" *ngIf = "selectedPhoneContacts">
+      <!-- <div class="wrapper" *ngIf = "selectedPhoneContacts">
         <h2>Update Contact</h2>
         <h3>Name: <input type="text" [(ngModel)]="selectedPhoneContacts.contactName"></h3><br>
         <h3>Mobile Number:  <input type="text" [(ngModel)]="selectedPhoneContacts.phoneNumber"></h3><br>
-      </div>
+      </div> -->
 
