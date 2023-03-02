@@ -1,9 +1,25 @@
 
 button{
-  background: green;
+  background: yellowgreen;
   color: #fff;
   padding: 5px 15px;
   border-radius: 5px;
-  border: thin solid green;
+  border: thin solid  yellowgreen;
   margin: 5px ;
+}
+
+h1{
+  text-align: center;
+  color: black;
+  text-shadow: 0px 2px 0px #fff;
+  background-color: grey;
+}
+.wrapper {
+  width: 550px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #555;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: gray;
 }

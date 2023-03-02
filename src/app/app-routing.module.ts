@@ -8,11 +8,14 @@ import { UpdatecontactComponent } from './components/updatecontact/updatecontact
 
 
 
+
 const routes: Routes = [
-    {path: '', component: AddcontactComponent},
+  {path:'',redirectTo:'contacts/phoneBook',pathMatch:'full'},
+    {path: 'contacts/add', component: AddcontactComponent},
+    {path: 'contacts/phoneBook', component: PhoneBookComponent},
     {path: '', component: DeletecontactComponent},
     {path: '', component: PhoneBookComponent},
-    {path: 'update/:id', component: UpdatecontactComponent}
+    {path: '', component: UpdatecontactComponent}
 ];
 
 @NgModule({
